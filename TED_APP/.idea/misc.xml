@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/louis/Desktop/android-group-project/TED_APP/app/src/main/res/layout/activity_splash.xml" value="0.13020833333333334" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25317028985507245" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.25317028985507245" />
+        <entry key="app/src/main/res/layout/layout_header.xml" value="0.29347826086956524" />
       </map>
     </option>
   </component>

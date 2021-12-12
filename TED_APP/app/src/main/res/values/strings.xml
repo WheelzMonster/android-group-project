@@ -6,4 +6,6 @@
     <string name="txt_btn_etudiant_romain">Romain Diolot</string>
     <string name="txt_btn_etudiant_thibault">Thibault Thieuleux</string>
     <string name="txt_header_lading_page">Epsi</string>
+    <string name="txt_header_etudiant_page">Infos</string>
+    <string name="txt_header_rayon_page">Rayons</string>
 </resources>

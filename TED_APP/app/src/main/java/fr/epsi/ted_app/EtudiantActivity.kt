@@ -9,7 +9,7 @@ class EtudiantActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_etudiant)
-        setHeaderTitle("Infos")
+        setHeaderTitle(getString(R.string.txt_header_etudiant_page))
         showBack()
 
         val buttonLouis = findViewById<Button>(R.id.button_etudiant_louis)

@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -30,16 +29,13 @@
 
             <Button
                 android:id="@+id/button_home_etudiants"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center_horizontal"
+                style="@style/ButtonLandingPage"
                 android:text="@string/txt_btn_home_etudiants" />
             <Button
                 android:id="@+id/button_home_rayons"
                 android:layout_marginTop="20dp"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center_horizontal"
+                style="@style/ButtonLandingPage"
+
                 android:text="@string/txt_btn_home_rayons" />
 
         </LinearLayout>

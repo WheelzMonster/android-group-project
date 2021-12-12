@@ -10,6 +10,7 @@ class EtudiantActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_etudiant)
         setHeaderTitle("Infos")
+        showBack()
 
         val buttonLouis = findViewById<Button>(R.id.button_etudiant_louis)
         val buttonRomain = findViewById<Button>(R.id.button_etudiant_romain)

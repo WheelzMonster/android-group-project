@@ -35,7 +35,6 @@
                 android:id="@+id/button_home_rayons"
                 android:layout_marginTop="20dp"
                 style="@style/ButtonLandingPage"
-
                 android:text="@string/txt_btn_home_rayons" />
 
         </LinearLayout>

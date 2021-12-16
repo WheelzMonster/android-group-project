@@ -20,19 +20,22 @@ class EtudiantActivity : BaseActivity() {
         val studentList = arrayListOf<Student>()
 
         studentList.add(Student(
-            "THIEULEUX Thibault",
+            "Thieuleux",
+            "Thieuleux Thibault",
             "thibault.thieuleux@epsi.fr",
             "TED",
             "https://randomuser.me/api/portraits/men/67.jpg"
         ))
         studentList.add(Student(
-            "ESCARTIN Louis",
+            "Escartin",
+            "Escartin Louis",
             "louis.escartin@epsi.fr",
             "TED",
             "https://randomuser.me/api/portraits/men/32.jpg"
         ))
         studentList.add(Student(
-            "DIOLOT Romain",
+            "Diolot",
+            "Diolot Romain",
             "romain.diolot@epsi.fr",
             "TED",
             "https://randomuser.me/api/portraits/men/88.jpg"
@@ -47,6 +50,7 @@ class EtudiantActivity : BaseActivity() {
         buttonThibault.setOnClickListener(View.OnClickListener {
             val newIntent = Intent(application,DetailActivity::class.java)
 
+            newIntent.putExtra("title", studentList[0].lastname)
             newIntent.putExtra("studentName", studentList[0].name)
             newIntent.putExtra("studentEmail", studentList[0].email)
             newIntent.putExtra("studentGroup", studentList[0].group)
@@ -58,6 +62,7 @@ class EtudiantActivity : BaseActivity() {
         buttonLouis.setOnClickListener(View.OnClickListener {
             val newIntent = Intent(application,DetailActivity::class.java)
 
+            newIntent.putExtra("title", studentList[1].lastname)
             newIntent.putExtra("studentName", studentList[1].name)
             newIntent.putExtra("studentEmail", studentList[1].email)
             newIntent.putExtra("studentGroup", studentList[1].group)
@@ -69,6 +74,7 @@ class EtudiantActivity : BaseActivity() {
         buttonRomain.setOnClickListener(View.OnClickListener {
             val newIntent = Intent(application,DetailActivity::class.java)
 
+            newIntent.putExtra("title", studentList[2].lastname)
             newIntent.putExtra("studentName", studentList[2].name)
             newIntent.putExtra("studentEmail", studentList[2].email)
             newIntent.putExtra("studentGroup", studentList[2].group)

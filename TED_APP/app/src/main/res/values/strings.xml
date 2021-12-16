@@ -8,4 +8,9 @@
     <string name="txt_header_lading_page">Epsi</string>
     <string name="txt_header_etudiant_page">Infos</string>
     <string name="txt_header_rayon_page">Rayons</string>
+    <string name="student_name">Nom etudiant</string>
+    <string name="student_email">Email etudiant</string>
+    <string name="student_group">Groupe etudiant</string>
+    <string name="student_img_url">URL image etudiant</string>
+    <string name="urlEpsi">https://www.epsi.fr/</string>
 </resources>

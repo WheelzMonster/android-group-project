@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProject/B3/android-group-project/TED_APP/app/src/main/res/layout/activity_categorie_online.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProject/B3/android-group-project/TED_APP/app/src/main/res/layout/activity_detail.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProject/B3/android-group-project/TED_APP/app/src/main/res/layout/activity_etudiant.xml" value="0.17074275362318841" />
         <entry key="..\:/AndroidStudioProject/B3/android-group-project/TED_APP/app/src/main/res/layout/activity_main.xml" value="0.12158054711246201" />
         <entry key="..\:/AndroidStudioProject/B3/android-group-project/TED_APP/app/src/main/res/layout/activity_rayon.xml" value="0.13677536231884058" />
+        <entry key="..\:/AndroidStudioProject/B3/android-group-project/TED_APP/app/src/main/res/layout/cell_categorie.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProject/B3/android-group-project/TED_APP/app/src/main/res/layout/layout_header.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Romain/AndroidStudioProjects/android-group-project/TED_APP/app/src/main/res/layout/activity_detail.xml" value="0.33" />
         <entry key="..\:/Users/Romain/AndroidStudioProjects/android-group-project/TED_APP/app/src/main/res/layout/activity_etudiant.xml" value="0.17831813576494426" />

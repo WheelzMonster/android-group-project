@@ -1,20 +1,15 @@
 package fr.epsi.ted_app
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
-import com.squareup.picasso.Picasso
 
-class EtudiantActivity : BaseActivity() {
+class StudentActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_etudiant)
-        setHeaderTitle(getString(R.string.txt_header_etudiant_page))
+        setHeaderTitle(getString(R.string.txt_header_student_page))
         showBack()
 
         val studentList = arrayListOf<Student>()
@@ -48,7 +43,7 @@ class EtudiantActivity : BaseActivity() {
 
 
         buttonThibault.setOnClickListener(View.OnClickListener {
-            val newIntent = Intent(application,DetailActivity::class.java)
+            val newIntent = Intent(application,StudentDetailActivity::class.java)
 
             newIntent.putExtra("title", studentList[0].lastname)
             newIntent.putExtra("studentName", studentList[0].name)
@@ -60,7 +55,7 @@ class EtudiantActivity : BaseActivity() {
         })
 
         buttonLouis.setOnClickListener(View.OnClickListener {
-            val newIntent = Intent(application,DetailActivity::class.java)
+            val newIntent = Intent(application,StudentDetailActivity::class.java)
 
             newIntent.putExtra("title", studentList[1].lastname)
             newIntent.putExtra("studentName", studentList[1].name)
@@ -72,7 +67,7 @@ class EtudiantActivity : BaseActivity() {
         })
 
         buttonRomain.setOnClickListener(View.OnClickListener {
-            val newIntent = Intent(application,DetailActivity::class.java)
+            val newIntent = Intent(application,StudentDetailActivity::class.java)
 
             newIntent.putExtra("title", studentList[2].lastname)
             newIntent.putExtra("studentName", studentList[2].name)

@@ -1,6 +1,5 @@
 package fr.epsi.ted_app
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -15,12 +14,12 @@ class MainActivity : BaseActivity() {
         val buttonRayon = findViewById<Button>(R.id.button_home_rayons)
 
         buttonEtudiant.setOnClickListener(View.OnClickListener {
-            val newIntent = Intent(application,EtudiantActivity::class.java)
+            val newIntent = Intent(application,StudentActivity::class.java)
             startActivity(newIntent)
         })
 
         buttonRayon.setOnClickListener(View.OnClickListener {
-            val newIntent = Intent(application,CategorieOnlineActivity::class.java)
+            val newIntent = Intent(application,CategoryOnlineActivity::class.java)
             startActivity(newIntent)
         })
     }

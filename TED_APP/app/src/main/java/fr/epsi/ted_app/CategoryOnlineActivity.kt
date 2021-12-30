@@ -1,11 +1,7 @@
 package fr.epsi.ted_app
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import okhttp3.*
@@ -13,19 +9,19 @@ import org.json.JSONObject
 import java.io.IOException
 
 
-open class CategorieOnlineActivity : BaseActivity() {
+open class CategoryOnlineActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_categorie_online)
-        setHeaderTitle("Rayons")
+        setContentView(R.layout.activity_category_online)
+        setHeaderTitle(getString(R.string.txt_header_category_page))
         showBack()
 
-        val categories = arrayListOf<Categorie>()
+        val categories = arrayListOf<Category>()
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewCategories)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        val categorieAdapter = CategorieAdapter(categories)
-        recyclerView.adapter=categorieAdapter
+        val categoryAdapter = CategoryAdapter(categories)
+        recyclerView.adapter=categoryAdapter
 
         val okHttpClient: OkHttpClient = OkHttpClient.Builder().build()
         val mRequestURL="https://djemam.com/epsi/categories.json"
@@ -48,7 +44,7 @@ open class CategorieOnlineActivity : BaseActivity() {
                     val jsArrayCategories= jsCategories.getJSONArray("items")
                     for(i in 0 until jsArrayCategories.length()){
                         val jsCategorie = jsArrayCategories.getJSONObject(i)
-                        val categorie = Categorie(jsCategorie.optInt("category_id"),
+                        val categorie = Category(jsCategorie.optInt("category_id"),
                             jsCategorie.optString("title",""),
                             jsCategorie.optString("products_url",""))
                         categories.add(categorie)
@@ -56,7 +52,7 @@ open class CategorieOnlineActivity : BaseActivity() {
                     }
                     Log.d("Category","${categories.size}")
                     runOnUiThread(Runnable {
-                        categorieAdapter.notifyDataSetChanged()
+                        categoryAdapter.notifyDataSetChanged()
                     })
                 }
             }

@@ -14,7 +14,7 @@ class ProductOnlineActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_online)
-        setHeaderTitle("")
+        setHeaderTitle(getString(R.string.txt_header_product_page))
         showBack()
 
         val products = arrayListOf<Product>()

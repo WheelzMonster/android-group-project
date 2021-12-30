@@ -18,15 +18,4 @@ open class BaseActivity: AppCompatActivity(){
         val textViewTitle = findViewById<TextView>(R.id.textViewTitle)
         textViewTitle.text=text
     }
-
-    fun setStudentInfo(name:String, email:String, group:String){
-        val nameViewDetail = findViewById<TextView>(R.id.nameViewDetail)
-        val emailViewDetail = findViewById<TextView>(R.id.emailViewDetail)
-        val groupViewDetail = findViewById<TextView>(R.id.groupViewDetail)
-
-        nameViewDetail.text=name
-        emailViewDetail.text=email
-        groupViewDetail.text=group
-
-    }
 }

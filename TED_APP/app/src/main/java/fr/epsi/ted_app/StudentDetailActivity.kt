@@ -6,10 +6,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.squareup.picasso.Picasso
 
-class DetailActivity : BaseActivity() {
+class StudentDetailActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail)
+        setContentView(R.layout.activity_student_detail)
         intent.getStringExtra("title")?.let { setHeaderTitle(it) }
         showBack()
         val imageView = findViewById<ImageView>(R.id.imageViewDetail)

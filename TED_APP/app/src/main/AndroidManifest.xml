@@ -13,8 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TED_APP">
         <activity
+            android:name=".ProductDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ProductOnlineActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".CategoryOnlineActivity"
             android:exported="false" />

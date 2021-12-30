@@ -20,7 +20,7 @@ class MainActivity : BaseActivity() {
         })
 
         buttonRayon.setOnClickListener(View.OnClickListener {
-            val newIntent = Intent(application,RayonActivity::class.java)
+            val newIntent = Intent(application,CategorieOnlineActivity::class.java)
             startActivity(newIntent)
         })
     }

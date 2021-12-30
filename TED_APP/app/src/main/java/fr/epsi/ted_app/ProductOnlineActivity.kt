@@ -1,11 +1,8 @@
 package fr.epsi.ted_app
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import okhttp3.*
@@ -13,19 +10,20 @@ import org.json.JSONObject
 import java.io.IOException
 
 
-open class CategorieOnlineActivity : BaseActivity() {
+class ProductOnlineActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_categorie_online)
-        setHeaderTitle("Rayons")
+        setContentView(R.layout.activity_product_online)
+        setHeaderTitle("")
         showBack()
 
-        val categories = arrayListOf<Categorie>()
+        val products = arrayListOf<Product>()
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewCategories)
+
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewProducts)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        val categorieAdapter = CategorieAdapter(categories)
-        recyclerView.adapter=categorieAdapter
+        val productAdapter = ProductAdapter(products)
+        recyclerView.adapter=productAdapter
 
         val okHttpClient: OkHttpClient = OkHttpClient.Builder().build()
         val mRequestURL="https://djemam.com/epsi/categories.json"
@@ -44,25 +42,23 @@ open class CategorieOnlineActivity : BaseActivity() {
                 val data = response.body?.string()
 
                 if(data!=null){
-                    val jsCategories = JSONObject(data)
-                    val jsArrayCategories= jsCategories.getJSONArray("items")
-                    for(i in 0 until jsArrayCategories.length()){
-                        val jsCategorie = jsArrayCategories.getJSONObject(i)
-                        val categorie = Categorie(jsCategorie.optInt("category_id"),
-                            jsCategorie.optString("title",""),
-                            jsCategorie.optString("products_url",""))
-                        categories.add(categorie)
-                        Log.d("categorie",categorie.title)
+                    val jsProducts = JSONObject(data)
+                    val jsArrayProducts = jsProducts.getJSONArray("items")
+                    for(i in 0 until jsArrayProducts.length()){
+                        val jsProduct = jsArrayProducts.getJSONObject(i)
+                        val product = Product(jsProducts.optString("name", ""),
+                            jsProduct.optString("description",""),
+                            jsProduct.optString("picture_url",""))
+                        products.add(product)
+                        Log.d("product",product.name)
                     }
-                    Log.d("Category","${categories.size}")
+                    Log.d("Product","${products.size}")
                     runOnUiThread(Runnable {
-                        categorieAdapter.notifyDataSetChanged()
+                        productAdapter.notifyDataSetChanged()
                     })
                 }
             }
 
         })
-
-
     }
 }

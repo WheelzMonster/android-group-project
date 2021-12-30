@@ -1,21 +1,19 @@
 package fr.epsi.ted_app
 
-import android.util.Log
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.squareup.picasso.Picasso
 import fr.epsi.ted_app.CategorieAdapter.ViewHolder
 
 class CategorieAdapter(val categories: ArrayList<Categorie>):RecyclerView.Adapter<ViewHolder>() {
 
     class ViewHolder(view:View) :RecyclerView.ViewHolder(view){
         val buttonCategorie = view.findViewById<TextView>(R.id.buttonCategorie)
-        //val contentLayout = view.findViewById<LinearLayout>(R.id.contentLayout)
+        //val buttonProduct = view.findViewById<Button>(R.id.buttonProduct)
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
@@ -28,10 +26,6 @@ class CategorieAdapter(val categories: ArrayList<Categorie>):RecyclerView.Adapte
         val categorie = categories.get(position)
         holder.buttonCategorie.text=categorie.title
         holder.buttonCategorie.setOnClickListener(View.OnClickListener{})
-//        holder.contentLayout.setOnClickListener(View.OnClickListener {
-//            (holder.contentLayout.context.applicationContext as TED_App).showToast(categorie.title)
-//        })
-        //Picasso.get().load(student.imgUrl).into(holder.imageViewStudent)
     }
 
     override fun getItemCount(): Int {

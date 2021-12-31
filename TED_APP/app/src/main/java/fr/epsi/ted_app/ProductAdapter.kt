@@ -17,7 +17,7 @@ class ProductAdapter(val products: ArrayList<Product>):RecyclerView.Adapter<View
     class ViewHolder(private val context: Context, view:View) :RecyclerView.ViewHolder(view), View.OnClickListener{
         val imageViewProduct = view.findViewById<ImageView>(R.id.imageViewProduct)
         val nameProduct = view.findViewById<TextView>(R.id.textViewName)
-        val descriptionProduct = view.findViewById<TextView>(R.id.textViewDescription)
+        var descriptionProduct = view.findViewById<TextView>(R.id.textViewDescription)
         var product: Product? = null
 
         init {
@@ -25,7 +25,7 @@ class ProductAdapter(val products: ArrayList<Product>):RecyclerView.Adapter<View
         }
 
         override fun onClick(v: View?) {
-            val newIntent = Intent(context, ProductOnlineActivity::class.java)
+            val newIntent = Intent(context, ProductDetailActivity::class.java)
             newIntent.putExtra("name", product?.name)
             newIntent.putExtra("description", product?.description)
             newIntent.putExtra("url", product?.picture_url)

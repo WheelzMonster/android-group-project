@@ -9,7 +9,7 @@ class ProductDetailActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_detail)
-        intent.getStringExtra("title")?.let { setHeaderTitle(it)}
+        intent.getStringExtra("name")?.let { setHeaderTitle(it)}
         showBack()
 
         val descriptionProduct = intent.getStringExtra("description")
